@@ -1,0 +1,10 @@
+---
+- name: VAGRANT | Download & unzip vagrant archive
+  unarchive:
+    src: "{{ vagrant_download_url }}"
+    remote_src: true
+    dest: /usr/local/bin/
+    mode: 0555
+    owner: root
+    group: root
+  become: true

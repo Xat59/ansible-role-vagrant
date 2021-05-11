@@ -1,0 +1,12 @@
+---
+- include: check.yml
+
+- include: install_from_website.yml
+  when:
+  - not vagrant_is_installed or vagrant_is_different_version
+  - not install_from_repo
+
+- include: install_EL.yml
+  when:
+    - install_from_repo
+    - ansible_os_family == "RedHat"

@@ -1,0 +1,22 @@
+---
+- name: VAGRANT | Check if vagrant is already installed
+  shell: '[ -x "$(command -v vagrant)" ] && echo "True" || echo "False"'
+  register: vagrant_is_installed_command
+  changed_when: false
+
+- name: VAGRANT | Get vagrant version
+  shell: >
+    set -e pipefail && \
+    vagrant --version | cut -d" " -f2
+  register: vagrant_current_installed_version
+  when:
+    - vagrant_is_installed_command
+  changed_when: false
+
+- name: VAGRANT | Set installed fact
+  set_fact:
+    vagrant_is_installed: "{{ vagrant_is_installed_command.stdout }}"
+
+- name: VAGRANT | Set same version fact
+  set_fact:
+    vagrant_is_different_version: "{{ vagrant_current_installed_version }} != {{ vagrant_version }}"
