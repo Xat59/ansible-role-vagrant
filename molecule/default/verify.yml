@@ -5,6 +5,12 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: Example assertion
-    assert:
-      that: true
+    - name: get vagrant binary
+      shell: '[ -x "$(command -v vagrant)" ] && echo "True" || echo "False"'
+      register: vagrant_is_installed_command
+      changed_when: false
+
+    - name: Service is enabled and running
+      assert:
+        that:
+          - vagrant_is_installed_command.stdout == "True"
