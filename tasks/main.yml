@@ -6,7 +6,12 @@
   - not vagrant_is_installed or vagrant_is_different_version
   - not install_from_repo
 
-- include: install_EL.yml
+- include: install_Fedora.yml
   when:
     - install_from_repo
-    - ansible_os_family == "RedHat"
+    - ansible_distribution == "Fedora"
+
+- include: install_Ubuntu.yml
+  when:
+    - install_from_repo
+    - ansible_distribution == "Ubuntu"
