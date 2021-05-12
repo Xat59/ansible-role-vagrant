@@ -1,7 +1,0 @@
----
-- name: VAGRANT | Install from repo
-  yum:
-    name: vagrant
-    state: present
-    update_cache: true
-  become: true
