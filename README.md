@@ -1,6 +1,6 @@
 # vagrant
 
-![Apache 2.0 Licence](https://img.shields.io/hexpm/l/plug.svg) ![Ansible](https://img.shields.io/badge/ansible-2.10.x-green.svg)
+![Build Status](https://api.travis-ci.com/Xat59/ansible-role-vagrant.svg) ![Apache 2.0 Licence](https://img.shields.io/hexpm/l/plug.svg) ![Ansible](https://img.shields.io/badge/ansible-2.10.x-green.svg)
 
 Ansible role that installs Hashicorp `vagrant` binary.
 
