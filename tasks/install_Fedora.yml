@@ -1,0 +1,7 @@
+---
+- name: VAGRANT | Install from Fedora repo
+  yum:
+    name: vagrant
+    state: present
+    update_cache: true
+  become: true

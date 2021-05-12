@@ -1,0 +1,7 @@
+---
+- name: VAGRANT | Install from Ubuntu repo
+  apt:
+    name: vagrant
+    state: present
+    update_cache: true
+  become: true
