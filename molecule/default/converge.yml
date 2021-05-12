@@ -4,4 +4,4 @@
   tasks:
     - name: "Include ansible-role-vagrant"
       include_role:
-        name: "ansible-role-vagrant"
+        name: "xat.vagrant"
