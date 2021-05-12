@@ -18,7 +18,7 @@ Ansible role that installs Hashicorp `vagrant` binary.
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](https://github.com/Xat59/vagrant/tags).
+For the versions available, see the [tags on this repository](https://github.com/Xat59/ansible-role-vagrant/tags).
 
 Additionaly you can see what change in each version in the [CHANGELOG.md](CHANGELOG.md) file.
 
